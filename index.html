@@ -14,23 +14,23 @@
 
     <h2 class="mt-5">Угадай число от 1 до 100</h2>
 
-    <p>Осталось попыток:  <output id="attemptPlace"></output></p> 
+    <p>Осталось попыток:  <output id="attemptPlace">10</output></p> 
 
-    <img src="./assets/images/10.png" class="my-4" alt="">
+    <img src="./assets/images/10.png" id="attemptImage" class="my-4" alt="">
 
     <div class="row g-3 justify-content-center mb-4">
       <div class="col-auto">
-        <label for="inputPassword6" class="col-form-label">Ваш вариант</label>
+        <label for="inputUserVariant" class="col-form-label">Ваш вариант</label>
       </div>
       <div class="col-auto">
-        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+        <input type="number" id="inputUserVariant" class="form-control" min="1" max="100">
       </div>
       <div class="col-auto">
-        <button type="button" class="btn btn-light border-secondary">Дать ответ</button>
+        <button onclick="game()" type="button" class="btn btn-light border-secondary">Дать ответ</button>
       </div>
     </div>
 
-    <p>Ваш вариант </p>
+    <p id="messagePlace" class="fw-bold"></p>
 
   </div>
 
