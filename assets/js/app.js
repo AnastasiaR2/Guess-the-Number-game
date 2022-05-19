@@ -9,9 +9,17 @@
 
   let attempt = 10;
 
+  let isFail = true;
+
   function game(){
 
     userVariant = +inputUserVariant.value;
+
+    if(isFail == false){
+
+      return;
+      
+    }
 
     if(attempt == 0){
 
@@ -24,6 +32,8 @@
     if(userVariant == number){
 
       messagePlace.innerHTML = 'Поздравляю! Вы угадали!';
+
+      isFail = false;
 
       return;
 
